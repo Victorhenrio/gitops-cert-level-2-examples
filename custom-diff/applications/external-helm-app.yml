@@ -23,13 +23,13 @@ spec:
       - CreateNamespace=true  
       
   ignoreDifferences:
-  - group: apps
+  - group: *
     kind: Deployment
     name: simple-deployment
     namespace: example02
     jsonPointers:
     - /metadata/annotations/creation
-  - group: secrets
+  - group: *
     kind: Secret
     name: example-secret
     namespace: example02
